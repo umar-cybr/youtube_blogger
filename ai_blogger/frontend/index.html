@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+    <title>Youtube Blogger</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+    @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to { 
+                transform: rotate(360deg);
+            }
+        }
+         
+        
+         @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to { 
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        .load {
+            width: 80px;
+            height: 80px;
+            margin: 50px auto 0;
+            border:solid 10px #95b8e0;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+             -webkit-transition: all 0.5s ease-in;
+            -webkit-animation-name:             rotate; 
+            -webkit-animation-duration:         1.0s; 
+            -webkit-animation-iteration-count:  infinite;
+            -webkit-animation-timing-function: linear;
+                
+                 transition: all 0.5s ease-in;
+            animation-name:             rotate; 
+            animation-duration:         1.0s; 
+            animation-iteration-count:  infinite;
+            animation-timing-function: linear; 
+        }
+</style>
+</head>
+<body class="flex flex-col min-h-scrren bg-gray-100 font-sans antialised">
+    <!--Navigation Bar at the top-->
+    <nav class="bg-black p-4 text-white flex justify-between">
+        <div>
+            <h1 class="text-3xl font-bold">Youtube Blogger</h1>
+        </div>
+        <div>
+            <a href="#" class="text-white hover:underline">Logout</a>
+        </div>
+    </nav>
+    <!--Main part of the page-->
+    <div class="flex-grow container mx-auto px-4 sm:px-0">
+        <div class="max-w-3xl mx-auto mt-10 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            <div class="text-center">
+                <h2 class="text-2xl font-semibold mb-3 mt-3">Welcome to Your Personal Content Creator.</h2>
+                <p class="text-gray-700">Below you will find an input field. Copy and paste your Youtube link to have our AI generate an article for you. By using this website, you agree to credit the YouTube video's creator in your use case.</p>
+            </div>
+            <br>
+            <!--Input Fields-->
+            <div>
+                <h2 class="text-xl mb-4 font-semibold text-center">Enter Youtube Link</h2>
+                <div class="flex space-x-4"></div>
+                <input id="youtubeLink" type="url" placeholder="Enter Link Here" class="flex-grow w-full p-2 border border-black rounded-lg">
+                <div class="flex items-center justify-center">
+                    <button id="generateBlogButton" class="bg-black text-white px-4 p-1 rounded-lg hover:bg-gray-600 mt-3 ml-3">Generate</button>
+                </div>
+            </div>
+        <!--Loading Circle-->
+        <div style="display:none" id="loading-circle" class="load">
+            
+        </div>
+        </div>
+        <div>
+            <section class="mt-5 flex-grow">
+                <h2 class="text-xl mb-4 font-semibold">Generated Article</h2>
+                <div id="blogContent" class="m2 text-gray-700 spac-y-4">
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="text-center p-4 text-black mt-40">Created by Umar Ahmed</footer>
+    <script>
+
+    </script>
+</body>
+</html>'
